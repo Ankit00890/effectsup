@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { Check, ChevronLeft, ChevronRight, Loader } from 'lucide-react';
+import { Check, ChevronLeft, ChevronRight } from 'lucide-react';
 
 type FormData = {
   name: string;
@@ -26,7 +26,7 @@ type FormData = {
 export default function SurveyForm() {
   const [currentSection, setCurrentSection] = useState(0);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  // Removed unused isSubmitting state
   const [submitError, setSubmitError] = useState<string | null>(null);
   const { register, handleSubmit, watch, formState: { errors } } = useForm<FormData>();
   
@@ -42,7 +42,7 @@ export default function SurveyForm() {
   const watchPreferredLanguage = watch("preferredLanguage");
   
   const onSubmit = async (data: FormData) => {
-    setIsSubmitting(true);
+    // Removed setIsSubmitting (no longer needed)
     setSubmitError(null);
     
     try {
@@ -65,8 +65,6 @@ export default function SurveyForm() {
     } catch (error) {
       console.error('Form submission error:', error);
       setSubmitError(error instanceof Error ? error.message : 'Something went wrong. Please try again.');
-    } finally {
-      setIsSubmitting(false);
     }
   };
   
