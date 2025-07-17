@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import './index.css';
 import Header from './components/Header';
 import SurveyForm from './components/SurveyForm';

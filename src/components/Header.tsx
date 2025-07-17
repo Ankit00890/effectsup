@@ -1,4 +1,3 @@
-
 import Logo from './Logo';
 
 export default function Header() {
@@ -18,12 +17,12 @@ export default function Header() {
             +100 users already onboard
           </div>
         </div>
-        
+
         <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
           Designed to <span className="gradient-text">Grow</span><br />
           Your <span className="text-white">Career</span>
         </h1>
-        
+
         <div className="glass-card p-6 rounded-xl mb-8 backdrop-blur-md">
           <div className="flex items-center mb-3">
             <div className="w-2 h-2 rounded-full bg-[#11cb5f] mr-2 animate-pulse"></div>
@@ -44,7 +43,7 @@ export default function Header() {
             </p>
           </div>
         </div>
-        
+
         <p className="text-white/70 italic mb-10">
           Iss survey se hum samajhna chahte hain ki aapko kya chahiye – aapka honest feedback hume app ko perfect banane mein help karega.
         </p>
